@@ -16,12 +16,6 @@ export default function TabsLayout() {
         tabBarIconStyle: {
           marginVertical: 4,
         },
-        tabBarLabelStyle: {
-          marginBottom: 4,
-        },
-        tabBarStyle: {
-          // minHeight: 100,
-        },
       }}
     >
       <Tabs.Screen
