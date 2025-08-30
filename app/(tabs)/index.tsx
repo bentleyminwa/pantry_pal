@@ -1,15 +1,19 @@
-import { Text, View } from 'react-native';
+import { themeColors } from '@/theme/colors';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function RecipeHomeScreen() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
+    <View style={styles.container}>
       <Text>Home of Recipes</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: themeColors.bg,
+  },
+});
