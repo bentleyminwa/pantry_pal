@@ -4,26 +4,26 @@ import { StyleSheet, Text, View } from 'react-native';
 
 interface RecipeItemProps {
   recipe: Recipe;
+  width?: number | '100%';
+  height?: number | '100%';
 }
 
-export function RecipeItem({ recipe }: RecipeItemProps) {
+export function RecipeItem({ recipe, width, height }: RecipeItemProps) {
   console.log('Rendering image url:', recipe.image);
 
   return (
-    <View style={styles.recipeItemContainer}>
-      <Image source={recipe.image} style={styles.recipeImage} />
+    <View style={{ width }}>
+      <Image
+        source={recipe.image}
+        style={[styles.recipeImage, { width, height }]}
+      />
       <Text style={styles.recipeName}>{recipe.name}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  recipeItemContainer: {
-    width: 150,
-  },
   recipeImage: {
-    width: 150,
-    height: 150,
     resizeMode: 'cover',
     borderRadius: 10,
   },

@@ -174,3 +174,14 @@ export const data: Recipe[] = [
     image: require('@/assets/images/grilled_chicken.png'),
   },
 ];
+
+export const recipeCategories = [
+  'Italian',
+  'Chinese',
+  'Mexican',
+  'Indian',
+  'American',
+  'Thai',
+  'French',
+  'Japanese',
+];
